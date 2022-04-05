@@ -11,8 +11,10 @@ spec:
   template:
     metadata:
       name: simplepod
+      labels:
+        tier: fullstack
     spec:
       containers:
         - name: nginx
           image: nginx
-  replicas: 20
+  replicas: 100
