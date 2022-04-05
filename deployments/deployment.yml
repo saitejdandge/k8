@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8
+  labels:
+    tier: fullstack
+spec:
+  selector:
+    matchLabels:
+      tier: fullstack
+  template:
+    metadata:
+      name: simplepod
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+  replicas: 100
