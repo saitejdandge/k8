@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: arjun
+  name: nginx-deployment
   labels:
-    tier: fullstack
+    tier: apigateway
+    app: apigateway
 spec:
   selector:
     matchLabels:
       tier: fullstack
   template:
     metadata:
-      name: simplepod
+      name: nginx-pod
       labels:
-        tier: fullstack
+        tier: apigateway
     spec:
       containers:
-        - name: nginx
+        - name: nginx-container
           image: nginx
-        - name: node
-          image: node
   replicas: 20
