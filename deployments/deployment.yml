@@ -17,4 +17,6 @@ spec:
       containers:
         - name: nginx
           image: nginx
+        - name: node
+          image: node
   replicas: 20
