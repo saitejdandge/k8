@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      tier: fullstack
+      tier: apigateway
   template:
     metadata:
       name: nginx-pod
